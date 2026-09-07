@@ -8,19 +8,22 @@
 
             <nav class="footer-nav" aria-label="Navegación del pie de página">
                 <h3>Enlaces</h3>
-                <router-link to="/home">Inicio</router-link>
-                <router-link to="/about">Sobre mí</router-link>
-                <router-link to="/who-am-i">Qué hago</router-link>
-                <router-link to="/projects">Proyectos</router-link>
-                <router-link to="/contact">Contacto</router-link>
+                <div class="footer-nav-links">
+                    <router-link to="/home">Inicio</router-link>
+                    <router-link to="/about">Sobre mí</router-link>
+                    <router-link to="/who-am-i">Qué hago</router-link>
+                    <router-link to="/projects">Proyectos</router-link>
+                    <router-link to="/contact">Contacto</router-link>
+                </div>
             </nav>
 
             <div class="footer-contact">
                 <h3>Conecta conmigo</h3>
                 <a href="mailto:axelmoran78@gmail.com">axelmoran78@gmail.com</a>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/axel-mor%C3%A1n-597185251/" aria-label="LinkedIn" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/Niseandryt" aria-label="GitHub" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/axel-mor%C3%A1n-597185251/" aria-label="LinkedIn"
+                        target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Niseandryt" aria-label="GitHub" target="_blank" id="github">GitHub</a>
                 </div>
             </div>
         </div>
@@ -32,19 +35,21 @@
 </template>
 
 <script>
-    export default {
-        name: 'FooterComponent',
-        components: {
+export default {
+    name: 'FooterComponent',
+    components: {
 
-        }
     }
+}
 </script>
 
 <style scoped>
 .site-footer {
     padding: 3rem 1.5rem 1.25rem;
-    color: #e5e7eb;
-    background: #111827;
+    /* color: #e5e7eb; */
+    /* background: #111827; */
+    color: var(--text-light);
+    background: var(--bg-dark);
 }
 
 .footer-container {
@@ -61,14 +66,27 @@
     margin: 0 0 0.75rem;
 }
 
+/* .footer-brand {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+} */
+
 .footer-brand p {
     max-width: 280px;
-    margin: 0;
+    margin: 0 auto;
     color: #9ca3af;
 }
 
 .footer-nav,
 .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.footer-nav-links {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -80,7 +98,12 @@
     color: #9ca3af;
     text-decoration: none;
     transition: color 0.2s ease;
+    /* margin-left: 5.4rem; */
 }
+
+/* #github {
+    margin: 0 !important;
+} */
 
 .footer-nav a:hover,
 .footer-contact a:hover {
@@ -104,7 +127,7 @@
 }
 
 .footer-bottom p {
-    margin: 0;
+    margin: 0 auto;
 }
 
 @media (max-width: 700px) {
@@ -112,5 +135,4 @@
         grid-template-columns: 1fr;
     }
 }
-
 </style>
