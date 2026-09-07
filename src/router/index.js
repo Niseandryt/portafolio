@@ -8,7 +8,8 @@ import Home from '@/views/Home.vue'
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
 	routes: [
-        { path: '/', redirect: '/home', name:'Home', component: Home},
+        { path: '/', redirect: '/home'},
+        { path: '/home', name:'Home', component: Home},
         { path: '/about', name: 'About', component: About},
         { path: '/who-am-i', name: 'Work', component: Work},
         { path: '/projects', name: 'Projects', component: Projects},

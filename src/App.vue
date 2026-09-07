@@ -7,7 +7,7 @@
       <nav class="navbar">
         <router-link class="nav-link" to="/home">Inicio</router-link>
         <router-link class="nav-link" to="/about">Sobre mi</router-link>
-        <router-link class="nav-link" to="/who-am-i">Que hago</router-link>
+        <router-link class="nav-link" to="/who-am-i">Qué hago</router-link>
         <router-link class="nav-link" to="/projects">Proyectos</router-link>
         <router-link class="nav-link" to="/contact">Contacto</router-link>
       </nav>
@@ -39,6 +39,8 @@ export default {
   --bg-dark: #0f172a;
   --bg-soft: #111827;
   --color-blue: #2e86ab;
+  --color-gray: #1a1a1a;
+  --color-black: #0d0d0d;
   --accent: #7b2cbf;
   --accent-strong: #e63946;
   --text-light: #e5e7eb;
@@ -62,15 +64,19 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: var(--text-dark);
+  /* color: var(--text-dark); */
+  color: var(--text-light);
   margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--color-black) 0%, var(--bg-dark) 100%);
 }
 
-.app-shell {
-  min-height: 100vh;
-  /* background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%); */
-  background: var(--bg-dark)
-}
+/* .app-shell {
+  
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%); 
+  
+   background: var(--bg-dark)
+} */
 
 .site-header {
   position: sticky;
@@ -104,7 +110,7 @@ html, body {
 }
 
 .nav-link {
-  color: var(--text-light);
+  /* color: var(--text-light); */
   text-decoration: none;
   font-weight: 600;
   padding: 0.7rem 1.1rem;
@@ -126,5 +132,49 @@ html, body {
 
 .page-content {
   padding: 2rem 1rem;
+}
+</style>
+
+<style>
+section {
+    padding: 3rem 2rem;
+    max-width: 1100px;
+    min-width: 100vw;
+    margin: auto;
+}
+
+section h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.grid {
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--bg-soft);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s;
+    /* color: var(--text-light); */
+    max-width: 320px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--color-blue);
+    font-family: 'Montserrat', sans-serif;
 }
 </style>

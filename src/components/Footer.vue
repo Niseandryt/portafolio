@@ -8,24 +8,25 @@
 
             <nav class="footer-nav" aria-label="Navegación del pie de página">
                 <h3>Enlaces</h3>
-                <a href="#inicio">Inicio</a>
-                <a href="#sobre-mi">Sobre mí</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#contacto">Contacto</a>
+                <router-link to="/home">Inicio</router-link>
+                <router-link to="/about">Sobre mí</router-link>
+                <router-link to="/who-am-i">Qué hago</router-link>
+                <router-link to="/projects">Proyectos</router-link>
+                <router-link to="/contact">Contacto</router-link>
             </nav>
 
             <div class="footer-contact">
                 <h3>Conecta conmigo</h3>
-                <a href="mailto:contacto@ejemplo.com">contacto@ejemplo.com</a>
+                <a href="mailto:axelmoran78@gmail.com">axelmoran78@gmail.com</a>
                 <div class="social-links">
-                    <a href="#linkedin" aria-label="LinkedIn">LinkedIn</a>
-                    <a href="#github" aria-label="GitHub">GitHub</a>
+                    <a href="https://www.linkedin.com/in/axel-mor%C3%A1n-597185251/" aria-label="LinkedIn" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Niseandryt" aria-label="GitHub" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; {{ new Date().getFullYear() }} Portafolio. Todos los derechos reservados.</p>
+            <p>&copy; {{ new Date().getFullYear() }} Axel Morán. Todos los derechos reservados.</p>
         </div>
     </footer>
 </template>
